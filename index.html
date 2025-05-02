@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Pedido</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <h1 class="text-center mb-4">🛍️ Faça seu Pedido</h1>
+
+          <form id="pedidoForm">
+            <div class="mb-3">
+              <label for="cliente" class="form-label">Nome do Cliente:</label>
+              <input type="text" class="form-control" id="cliente" placeholder="Digite seu nome" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Escolha os Produtos:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="produto" value="50" id="produto1">
+                <label class="form-check-label" for="produto1">
+                  Produto 1 - R$50
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="produto" value="100" id="produto2">
+                <label class="form-check-label" for="produto2">
+                  Produto 2 - R$100
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="produto" value="95" id="produto3">
+                <label class="form-check-label" for="produto1">
+                  Produto 3 - R$95
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="produto" value="170" id="produto4">
+                <label class="form-check-label" for="produto2">
+                  Produto 4 - R$170
+                </label>
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Finalizar Pedido</button>
+            </div>
+          </form>
+
+          <div id="resultado" class="alert alert-success mt-4 d-none" role="alert"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
